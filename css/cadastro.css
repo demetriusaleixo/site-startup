@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --cor-1: #8672ff;
+    --cor-2: #ffffff;
+    --cor-3: ;
+    --cor-texto1: #f0f0f0;
+    --cor-texto2: #2e2b41;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100vw;
+    height: 100vh;
+    font-family: "Open sans", sans-serif;
+    font-size: 12pt;
+    text-align: center;
+}
+
+body {
+    background-image: url('../imagens-login/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.bloco {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--cor-2);
+    border-radius: 20px;
+    width: 500px;
+    height: 500px;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    gap: 10px;
+}
