@@ -3,7 +3,7 @@
 :root {
     --cor-1: #8672ff;
     --cor-2: #ffffff;
-    --cor-3: ;
+    --cor-3: #f3f0ff;
     --cor-texto1: #f0f0f0;
     --cor-texto2: #2e2b41;
 }
@@ -18,7 +18,7 @@ html {
     width: 100vw;
     height: 100vh;
     font-family: "Open sans", sans-serif;
-    font-size: 12pt;
+    
     text-align: center;
 }
 
@@ -52,4 +52,73 @@ form {
     margin-top: 20px;
     margin-bottom: 50px;
     gap: 10px;
+}
+
+form > div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+form label {
+    flex-shrink: 0;
+    height: 50px;
+    width: 50px;
+    background-color: var(--cor-1);
+    fill: var(--cor-2);
+    border-radius: 10px 0px 0px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input {
+    flex-grow: 1;
+    min-width: 0;
+    height: 50px;
+    padding: 1em;
+    font-size: inherit;
+    border-radius: 0px 10px 10px 0px;
+    border: 2px solid var(--cor-3);
+    border-left: none;
+    background-color: var(--cor-3);
+    transition: 150ms;
+
+    &:hover {
+        border-color: var(--cor-1);
+    }
+}
+
+form input:focus {
+    outline: none;
+    background-color: var(--cor-texto1);
+}
+
+div:has(input:focus) > label {
+    background-color: var(--cor-texto2);
+}
+
+form button {
+    margin-top: 10px;
+    border: none;
+    border-radius: 20px;
+    padding: 0.85em 4em;
+    background-color: var(--cor-1);
+    color: var(--cor-3);
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: var(--cor-1);
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
